@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dlvqdaph2na2w"]
+
+[ext_resource type="Texture2D" uid="uid://cophi17sbg8in" path="res://assets/Tiles_38.png" id="1_bdm3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qiytn"]
+size = Vector2(64, 64)
+
+[node name="Wall" type="StaticBody2D" unique_id=1794300091 groups=["navigation_obstacles"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=834843143]
+shape = SubResource("RectangleShape2D_qiytn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=919206767]
+position = Vector2(-4.7683716e-06, -3.8146973e-06)
+scale = Vector2(0.49999997, 0.5)
+texture = ExtResource("1_bdm3b")

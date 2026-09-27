@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dvp4nharihmoj"]
+
+[ext_resource type="Script" uid="uid://bugx5d6mjfxxb" path="res://scripts/enemies/enemy.gd" id="1_6xk8f"]
+[ext_resource type="Texture2D" uid="uid://dt676am5ssias" path="res://assets/Monsters_0.png" id="2_8e3ao"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8e3ao"]
+radius = 7.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1253090052]
+script = ExtResource("1_6xk8f")
+speed = 1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=682646890]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_8e3ao")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=374235627]
+path_desired_distance = 4.0
+avoidance_enabled = true
+radius = 4.0
+max_speed = 1000.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1815163075]
+scale = Vector2(0.32812503, 0.32812503)
+texture = ExtResource("2_8e3ao")
